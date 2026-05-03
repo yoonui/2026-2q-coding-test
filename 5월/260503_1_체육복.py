@@ -3,7 +3,9 @@ def solution(n, lost, reserve):
     answer = n
 
     tmpLost = list(set(lost) - set(reserve))
+    tmpLost.sort()
     tmpReserve = list(set(reserve) - set(lost))
+    tmpReserve.sort()
 
     for i in tmpLost:
         tmp1 = i-1
